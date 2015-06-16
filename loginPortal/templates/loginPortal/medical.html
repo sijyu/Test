@@ -1,0 +1,39 @@
+{% extends "loginPortal/base_loged.html" %}
+{% block title %} Medical Form {% endblock %}
+
+
+{% block page %} 
+<h1>Medical Informtaion</h1>
+<!--<img style="position: absolute;
+    top: 0px;
+    right: 0px;" src="/static/loginPortal/images/wfhb.gif" width="10%" height="10%"/>
+<br/> -->
+<hr style="border-top: dotted 1px;" />
+<div id="form">
+	
+	<form action="/login/medical/" method="POST">{% csrf_token %}
+		
+		<div class="medical_information">
+			{{ form.volunteer_allergies.errors }}
+			<label for="id_volunteer_allergies">Volunteer Allergies: </label>
+			{{ form.volunteer_allergies}}
+		</div>
+        
+        <div class="medical_information">
+			{{ form.volunteer_medications.errors }}
+			<label for="id_volunteer_medications">Volunteer Medications: </label>
+			{{ form.volunteer_medications}}
+		</div>
+        
+        <div class="medical_information">
+			{{ form.volunteer_health_notes.errors }}
+			<label for="id_volunteer_health_notes">Volunteer Health Notes: </label>
+			{{ form.volunteer_health_notes}}
+		</div>
+
+		
+
+		<input id="medical_submit" type="submit" value="Submit" />
+	</form>
+</div>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "loginPortal/base_loged.html" %}
+{% block title %} Clock-Out {% endblock %}
+<script>
+	var toggle = function() {
+		var mydiv = document.getElementById('hourinfo');
+		if (mydiv.style.display === 'block')
+			mydiv.style.display = 'none';
+		else
+			mydiv.style.display = 'block'
+	}
+</script>
+
+{% block page %}
+	<span style="padding-right: 1%;">
+	 WELCOME, {{ user }}
+	</span>	
+	<br />
+		
+	<span style="text-align: left;">
+	Total Hours: {{ overall_hours }}
+	<br />
+	
+	Total Quarterly Hours: {{ quarterly_hours }}
+	</span>
+	
+	
+	<span id="logoutbutton">
+	<a href="/login/logout/">LOGOUT</a>
+	</span>
+	
+	<br />
+	
+	
+	<br /><br />
+{% endblock %}	
+	
+{% block buttons %}
+<form action="/login/out/" method="POST" enctype="multipart/form-data" >{% csrf_token %}
+	<center><input type="submit" id="submitbutton" value="CLOCK-OUT" onclick="toggle();">
+</form>
+<br />
+             
+        			<a id="submitbutton" href="/login/missedpunch/">
+        			MISSED PUNCH
+					</a>
+					
+					<div id="hourinfo">
+					<dl>
+					<dd>
+					Date ___ Hours ___
+					</dd>
+					</dl>
+					</div>
+					
+{% endblock %}	

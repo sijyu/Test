@@ -1,0 +1,85 @@
+{% extends "loginPortal/base_loged.html" %}
+
+{% block title %} Detail {% endblock %}
+
+{% block page %}
+	{% for item in query_results %}
+	<div id="detail">
+		<div id="picture">
+			<div id="photo">
+				<img src="">
+			</div>
+			<div id="data">
+				<p class="data_information">{{ item.first_name }} {{ item.last_name }}</p>
+				<br />
+				<p class="data_information">{{ item.date_of_birth }}</p>
+				<br />
+				<p class="data_information">{{ item.phone_number }}</p>
+			</div>
+		</div>
+		<div id="detail_information">
+			<div id="detail_header">
+				<h3 class="title_header">General Information</h3>
+			</div>
+			<div id="general_information"> 
+				<div id="type_information">
+					<br />
+					<p class="data_information">First Name: </p>
+			        <br />
+			    	<p class="data_information">Last Name: </p>
+			    	<br />
+			    	<p class="data_information">Email: </p>
+			    	<br />
+			    	<p class="data_information">Phone Number: </p>
+			    	<br />
+			    	<p class="data_information">Address: </p>
+			    	<br />
+			       	<p class="data_information">Last Login: </p>
+			    	<br />
+			    	<p class="data_information">Start Date: </p>
+			    	<br />
+			    	<p class="data_information">Emergency Contact First Name: </p>
+			    	<br />
+			    	<p class="data_information">Emergency Contact Last Name: </p>
+			    	<br />
+			    	<p class="data_information">Emergency Contact Phone: </p>
+			    	<br />
+			    	<p class="data_information">Emergency Contact Relation: </p>
+			    	
+				</div>
+				<div id="result_information">
+					<br />			    
+			        <p class="data_information">{{ item.first_name }}</p>
+			        <br />
+			    	<p class="data_information">{{ item.last_name }}</p>
+			    	<br />
+			    	<p class="data_information">{{ item.email }}</p>
+			    	<br />
+			    	<p class="data_information">{{ item.phone_number }}</p>
+			    	<br />
+			    	<p class="data_information">{{ item.address }}</p>
+			    	<br />
+			    	<p class="data_information">{{ item.last_login }}</p>
+			    	<br />
+			    	<p class="data_information">{{ item.start_date }}</p>
+			    	<br />
+			    	<p class="data_information">{{ item.contact_first_name }}</p>
+			    	<br />
+			    	<p class="data_information">{{ item.contact_last_name }}</p>
+			    	<br />
+			    	<p class="data_information">{{ item.contact_phone_number }}</p>
+			    	<br />
+			    	<p class="data_information">{{ item.relation_to_contact }}</p>
+			    </div>
+
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+{% endblock %}	
+	
+{% block buttons %}						
+     
+						
+
+{% endblock %}	

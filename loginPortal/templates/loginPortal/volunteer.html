@@ -1,0 +1,40 @@
+{% extends "loginPortal/base_loged.html" %}
+
+{% block title %} Volunteer {% endblock %}
+
+{% block page %}
+	<table id="volunteer_tbl" cellspacing="0"> 
+		<tr>
+			<th id="volunteer_tbl_header" colspan="5"><p class="volunteer_tbl_header" >Volunteers</p></th>
+	    <tr id="volunteer_tbl_fields">
+	        <th>ID</th>
+	       
+	        <th style="border-left: 1px black solid;">First Name</th>
+
+	        <th style="border-left: 1px black solid;">Last Name</th>
+
+	        <th style="border-left: 1px black solid;">Email</th>
+
+	        <th style="border-left: 1px black solid;">Phone</th>
+	    </tr>
+	    {% for item in query_results %}
+	    <tr id="volunteer_tbl_results"> 
+	        <td>{{ item.id }}</td>
+	        
+	        <td style="border-left: 1px black solid;"><a href="/login/detail?id={{ item.id }}">{{ item.first_name }}</a></td>
+
+	        <td style="border-left: 1px black solid;">{{ item.last_name }}</td>
+
+	        <td style="border-left: 1px black solid;">{{ item.email }}</td>
+
+	        <td style="border-left: 1px black solid;">{{ item.phone_number }}</td>
+	    </tr>
+	    {% endfor %}
+	</table>
+{% endblock %}	
+	
+{% block buttons %}						
+     
+						
+
+{% endblock %}	

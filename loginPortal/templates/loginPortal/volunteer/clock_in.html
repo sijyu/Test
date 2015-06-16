@@ -1,0 +1,42 @@
+{% extends "loginPortal/base_volunteer.html" %}
+
+{% block title %} Clock-In {% endblock %}
+
+{% block page %}
+	<span style="padding-right: 1%;">
+	 WELCOME, {{ user }}
+	</span>	
+	<br />
+		
+	<span style="text-align: left;">
+	Total Hours: {{ overall_hours }}
+	<br />
+	
+	Total Quarterly Hours: {{ quarterly_hours }}
+	</span>
+	
+	
+	<span id="logoutbutton">
+	<a href="/login/logout/">LOGOUT</a>
+	</span>
+	
+	<br />
+	
+	
+	<br /><br />
+{% endblock %}	
+	
+{% block buttons %}						
+<form action="/login/log/" method="POST" enctype="multipart/form-data" >{% csrf_token %}			
+	<center><input type="submit" id="submitbutton" value="CLOCK-IN">
+	
+	<a id="submitbutton" href="/login/missedpunch/">
+        				MISSED PUNCH
+						</a>
+</form>
+
+ <br />
+             
+						
+
+{% endblock %}	

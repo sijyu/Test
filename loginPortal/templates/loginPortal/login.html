@@ -1,0 +1,25 @@
+{% extends "loginPortal/base.html" %}
+{% block title %}Login Portal{% endblock %}
+
+{% block page %}
+<div id="loginbox"> 
+    <form id="login" action="/login/auth/" method="post" autocomplete="off">{% csrf_token %}
+  
+        <h3>PALS Therapy login</h3>
+            
+        <br /><br />
+                  
+        <label> Email: </label> <input type="text" name="email" class="login"/>
+                        
+        <br /><br />
+
+        <label>Password: </label> <input type="password" name="password" class="login"/>
+                        
+        <br /><br /><br />
+                        
+        <center><input type="submit" value="Login" class = "button"></center>
+                    
+    </form>
+                
+</div>
+{% endblock %}

@@ -1,0 +1,472 @@
+@charset "UTF-8";
+/* CSS Document */
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Myriad Pro", Arial, sans-serif;
+	background-image: url(images/bg1.jpeg);
+}
+
+.wrapper{
+	width: 1030px;
+	margin: auto;
+	font-family: Helvetica, Arial, sans-serif;
+}
+.header{
+	width: 970px;
+	margin: auto;
+	height: 184px;
+	float: left;
+}
+.header2{
+	width: 970px;
+	margin: auto;
+	height: 80px;
+	float: left;
+}
+.img{
+	width: 300px;
+	height: 184px;
+	float: left;
+}
+.tbl{
+	width: 381px;
+	height: 184px;
+	float: right;
+}
+/*** NAVIGATION ***/
+nav{
+	background: rgb(7, 57, 5);
+	margin-left: auto;
+	margin-right: auto;
+	/*font-family: Myriad Pro;*/
+	width: 1024px;
+	height: 35px;
+	position: fixed;
+  	top: 0px;
+	padding: 3px;
+	text-transform: uppercase;
+	z-index: 1;
+	-moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+  -khtml-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+  -webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+}
+
+nav ul {
+	list-style-type: none;
+	text-align: center;
+	padding: 3px;
+}
+
+nav li{
+	background: rgb(7, 57, 5);
+	display: inline;
+	padding: 10px;
+	border-left: 1px white solid;
+	margin-left: -4px;
+}
+
+#nav2{
+	background: rgb(7, 57, 5);
+	/*font-family: Myriad Pro;*/
+	position: relative;
+	top: 15px;
+	right: 30px;
+	width: 1020px;
+	height: 31px;
+	padding: 5px;
+	text-transform: uppercase;
+	-moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+    -khtml-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+    float: left;
+}
+.nav2{
+	margin-left: 120px;
+}
+
+#nav2 li{
+	background: rgb(7, 57, 5);
+	display: inline;
+	padding: 10px;
+	border-left: 1px white solid;
+	border-top: 1px white solid;
+	position: relative;
+	float: left;
+	margin-top: -6px;
+	text-align: center;
+
+}
+#nav2 li ul{
+	position: absolute;
+	display: none;
+	margin-top: 15px;
+	margin-left: -11px;
+	
+}
+#nav2 li:hover ul, #nav2 li.over ul{
+	display:block;
+}
+#nav2 li ul li{
+	display:block;
+	z-index: 1000;
+	
+}
+table a, nav a, #nav2 a{
+	color: white;
+	text-decoration: none;
+	margin: 0;
+}
+
+nav li:hover, #nav2 li:hover{
+	background-color: rgb(133, 182, 156);
+	-webkit-transition-property: background; 
+
+}
+
+
+nav img{
+	vertical-align: middle;
+	/*background-image: url(images/cart.png); */
+}
+
+/*** TRIANGLES ***/
+.triangle-r {
+  border-color: transparent transparent transparent #245000;
+  border-style: solid;
+  border-width: 15px;
+  height: 0px;
+  width: 0px;
+  position: fixed;
+  margin: 0 auto;
+  top: 25px;
+  left: 50%;
+  margin-left: 500px;
+  z-index: -1;
+}
+
+.triangle-l {
+  border-color: transparent #245000 transparent transparent;
+  border-style: solid;
+  border-width: 15px;
+  height: 0px;
+  width: 0px;
+  position: fixed;
+  margin: 0 auto;
+  top: 25px;
+  left: 50%;
+  margin-left: -530px;
+  z-index: -1;
+}
+
+.triangle-r2 {
+  border-color: transparent transparent transparent #245000;
+  border-style: solid;
+  border-width: 15px;
+  height: 0px;
+  width: 0px;
+  position: relative;
+  margin: 0 auto;
+  top: 10px;
+  left: 50%;
+  margin-left: 500px;
+  z-index: -1;
+}
+
+.triangle-l2 {
+  border-color: transparent #245000 transparent transparent;
+  border-style: solid;
+  border-width: 15px;
+  height: 0px;
+  width: 0px;
+  position: relative;
+  margin: 0 auto;
+  top: 41px;
+  left: 50%;
+  margin-left: -530px;
+  z-index: -1;
+}
+
+/*** CONTENT ***/
+#content {
+	width: 970px;
+	min-height: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	position: relative;
+	padding: 15px;
+	top: 40px;
+	border-left: 1px solid #ccc;
+  	border-right: 1px solid #ccc;
+	-moz-box-shadow: 0px 0px 6px rgba(0,0,0,0.95);
+  -khtml-box-shadow: 0px 0px 6px rgba(0,0,0,0.85);
+  -webkit-box-shadow: 0px 0px 6px rgba(0,0,0,0.95);
+}
+
+.right{
+	float: right;
+	margin-right: 20px;
+	margin-top: 57px;
+}
+
+.right td{
+	text-align: center;
+	padding: 0 10px;
+}
+
+table a {
+	color: rgb(7, 57, 5);
+	font-weight: bold;
+	font-family: Myriad Pro;
+}
+
+table a:hover {
+	color: rgb(133, 182, 156);
+}
+
+.volunteer {
+	background: url(images/volunteer1.png) top center;
+	background-repeat: no-repeat;
+	min-width: 150px !important;
+	max-width: 150px !important;
+	height: 100px !important;
+	
+}
+.volunteer:hover {
+	background: url(images/volunteer1.png) bottom center;
+	background-repeat: no-repeat;
+	min-width: 150px !important;
+	max-width: 150px !important;
+	height: 100px !important;
+}
+
+.participate {
+	min-width: 150px !important;
+	max-width: 150px !important;
+	height: 100px !important;
+	background: url(images/participate1.png) top center;
+	background-repeat: no-repeat;
+}
+.participate:hover {
+	min-width: 150px !important;
+	max-width: 150px !important;
+	height: 100px !important;
+	background: url(images/participate1.png) bottom center;
+	background-repeat: no-repeat;
+}
+
+.donate {
+	min-width: 100px !important;
+	max-width: 100px !important;
+	height: 100px !important;
+	background: url(images/donate1.png) top center;
+	background-repeat: no-repeat;
+}
+.donate:hover {
+	min-width: 100px !important;
+	max-width: 100px !important;
+	height: 100px !important;
+	background: url(images/donate1.png) bottom center;
+	background-repeat: no-repeat;
+}
+#loginbox {
+	width: 350px !important;
+	height: 190px !important;
+	border: 1px gray solid;
+	position: relative;
+	font-family: Myriad Pro;
+	padding: 40px;
+	padding-left: 40px;
+	text-align: center;
+	float: left;
+	margin-left: 269px;
+	margin-top: 40px;
+}
+
+label{
+	float: left;	
+}
+
+.button{
+	background-color: rgb(7, 57, 5);
+	color:  #FFF;
+	width: 100px;
+	position: relative;
+	margin-left:1px;
+
+}
+
+.login{
+	float: right;
+}
+
+#volunteer_tbl {
+	width: 95%;
+	margin: auto;
+}
+#volunteer_tbl_header{
+	background: rgb(7, 57, 5);
+	color: #fff;
+	text-align: left;
+	height: 50px;
+}
+.volunteer_tbl_header{
+	margin-left: 40px;
+	/*font-family: Myriad Pro;*/
+	font-size: 22px;
+}
+#volunteer_tbl_fields{
+	background: rgb(133, 182, 156);
+	border: 1px solid black;
+	height: 30px;
+}
+#volunteer_tbl_results{
+	border-right: 1px solid black;
+	text-align: center;
+}
+#detail{
+	width: 970px;
+	height: 600px;
+	float: left;
+	
+}
+#picture{
+	width: 350px;
+	height: 400px;
+	float: left;
+	margin: 30px;
+}
+#photo{
+	width: 150px;
+	height: 200px;
+	border: 1px black solid;
+	margin-left: 100px;
+	margin-top: 15px;
+	float: left;
+}
+#data{
+	width: 150px;
+	height: 100px;
+	
+	margin-left: 100px;
+	margin-top: 15px;
+	text-align: center;
+	float: left;
+}
+.data_information{
+	color: rgb(7, 57, 5);
+	font-style: bold;
+	font-size: 16px;
+}
+#general_information{
+	width: 470px;
+	overflow: auto;
+	margin: auto;
+	height: 350px;
+}
+#detail_information{
+	width: 490px;
+	height: 400px;
+	float: left;
+	margin: 30px;
+}
+#type_information{
+	width: 190px;
+	float: left;
+	margin: 10px; 
+	color: rgb(7, 57, 5);
+	text-align: left;
+	margin-left: 35px;
+}
+#result_information{
+	width: 190px;
+	float: left;
+	margin: 10px; 
+	color: rgb(7, 57, 5);
+	text-align: center;
+	
+}
+#detail_header{
+	border: 1px rgb(7, 57, 5) solid;
+	width: 220px;
+	height: 30px;
+	background: #fff;
+	float: left;
+	text-align: center;
+	padding: 7px;
+	margin-left: 130px;
+}
+.title_header{
+	font-size: 20px;
+	color: rgb(7, 57, 5);
+
+}
+#form{
+	width: 880px;
+	margin-left: 50px;
+	margin-top: 20px;
+}
+.form_registration{
+	width: 420px;
+	height: 30px;
+	float: left;
+	
+	text-align: center;
+	margin: 7px;
+	margin-left: 5px;
+}
+.errorlist{
+	font-size: 10px;
+	color: red;
+	
+}
+
+input[type="text"],
+input[type="password"]{
+  display: block;
+  width: 230px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+  margin-bottom: 5px;
+  float: right;
+  padding: 3px;
+}
+
+input[type="text"]:focus,
+input[type="text"].focus,
+input[type="password"]:focus,
+input[type="password"].focus
+ {
+  outline: none;
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
+
+}
+
+input[id="regi_submit"]{
+    width: 100px;
+    font-size: 25px;
+}
+
+
+.medical_information{
+	width: 420px;
+	height: 30px;
+	
+	text-align: center;
+	margin: 7px;
+	margin-left: 5px;
+}
+input[id="medical_submit"]{
+    width: 100px;
+    font-size: 25px;
+    
+}

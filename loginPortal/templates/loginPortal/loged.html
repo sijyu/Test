@@ -1,0 +1,15 @@
+{% extends "loginPortal/base.html" %}
+{% block title %} Loged {% endblock %}
+{% block page %}
+    
+    <span id="logoutbutton">
+    <a href="/login/logout/">LOGOUT</a>
+    </span>
+    
+    <br />
+    <span style="float: right; padding-right: 1%;">
+     WELCOME, {{ user_name }} - Email: {{ user_email }}
+    </span> 
+    
+    <br /><br />
+{% endblock %} 

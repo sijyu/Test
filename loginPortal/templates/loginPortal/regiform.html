@@ -1,0 +1,83 @@
+{% extends "loginPortal/base_loged.html" %}
+{% block title %} Registration Form {% endblock %}
+
+
+{% block page %} 
+<h1>Registration Form</h1>
+<!--<img style="position: absolute;
+    top: 0px;
+    right: 0px;" src="/static/loginPortal/images/wfhb.gif" width="10%" height="10%"/>
+<br/> -->
+<hr style="border-top: dotted 1px;" />
+<div id="form">
+	
+	<form action="/login/regi/" method="POST">{% csrf_token %}
+		
+		<div class="form_registration">
+			{{ form.first_name.errors }}
+			<label for="id_first_name">First Name: </label>
+			{{ form.first_name }}
+		</div>
+		<div class="form_registration">
+			{{ form.last_name.errors }}
+			<label for="id_last_name">Last Name: </label>
+			{{ form.last_name }}
+		</div>		
+		<div class="form_registration">
+			{{ form.email.errors }}
+			<label for="id_email">Email: </label>
+			{{ form.email }}
+		</div>
+		<div class="form_registration">
+			{{ form.password.errors }}
+			<label for="id_contact_first_name">Password: </label>
+			{{ form.password }}
+		</div>
+		<div class="form_registration">
+			{{ form.address.errors }}
+			<label for="id_address">Address: </label>
+			{{ form.address }}
+		</div>
+		<div class="form_registration">
+			{{ form.phone_number.errors }}
+			<label for="id_phone_number">Phone Number: </label>
+			{{ form.phone_number }}
+		</div>
+		<div class="form_registration">
+			{{ form.date_of_birth.errors }}
+			<label for="date_of_birth">Birthday: </label>
+			{{ form.date_of_birth }}
+		</div>
+		<div class="form_registration">
+			{{ form.start_date.errors }}
+			<label for="id_start_date">Start Date: </label>
+			{{ form.start_date }}
+		</div>
+		<div class="form_registration">
+			{{ form.contact_first_name.errors }}
+			<label for="id_contact_first_name">Contact First Name: </label>
+			{{ form.contact_first_name }}
+		</div>
+		<div class="form_registration">
+			{{ form.contact_last_name.errors }}
+			<label for="id_contact_last_name">Contact Last Name: </label>
+			{{ form.contact_last_name }}
+		</div>
+		<div class="form_registration">
+			{{ form.contact_phone_number.errors }}
+			<label for="id_contact_first_name">Contact Phone Number: </label>
+			{{ form.contact_phone_number }}
+		</div>
+		<div class="form_registration">
+			{{ form.relation_to_contact.errors }}
+			<label for="id_relation_to_contact">Contact Relation: </label>
+			{{ form.relation_to_contact }}
+		</div>
+		
+		
+		
+
+		<input id="regi_submit" type="submit" value="Submit" />
+	</form>
+</div>
+{% endblock %}
